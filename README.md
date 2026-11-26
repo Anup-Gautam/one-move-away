@@ -10,11 +10,11 @@ Communities share one 7×7 machine each day. Every player gets **3 moves**. Nobo
 - Shared TypeScript game engine in `src/shared`
 - Redis / Realtime / Scheduler (coming in later days)
 
-## Day 1 status
+## Progress
 
-- [x] Devvit React scaffold
-- [x] Shared types + constants
-- [x] Board helpers + 7×7 validation (49 cells, 1 source, 1 crystal)
+- [x] Day 1 — Devvit scaffold, shared types, 7×7 board validation
+- [x] Day 2 — Beam engine (mirrors, gates, walls, loops, crystal)
+- [x] Day 3 — Actions, shortest-solution solver, puzzles 001–003
 
 ## Commands
 

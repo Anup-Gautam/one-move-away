@@ -38,6 +38,24 @@ export function isInBounds(board: Board, x: number, y: number): boolean {
   return x >= 0 && x < board.width && y >= 0 && y < board.height;
 }
 
+/** Replaces the tile occupying (next.x, next.y). */
+export function replaceTile(board: Board, next: Tile): Board {
+  return {
+    ...board,
+    tiles: board.tiles.map((tile) =>
+      tile.x === next.x && tile.y === next.y ? next : tile
+    ),
+  };
+}
+
+/** Applies several tile replacements in order. */
+export function replaceTiles(board: Board, nextTiles: Tile[]): Board {
+  return nextTiles.reduce(
+    (current, tile) => replaceTile(current, tile),
+    board
+  );
+}
+
 /**
  * Builds a complete 7×7 board of empty cells, then places a directed
  * source and a crystal. Useful for Day 1 validation and later tests.
